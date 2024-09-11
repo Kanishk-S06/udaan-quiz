@@ -47,7 +47,7 @@ export default function QuizGenerator() {
   };
 
   return (
-    <div className="bg-white text-blue-700 p-6 rounded-lg shadow-lg w-full max-w-screen-md mx-auto">
+    <div className="bg-white text-black p-6 rounded-lg shadow-lg w-full max-w-screen-md mx-auto">
       <h1 className="text-2xl font-bold mb-4 text-center">UDAAN Quiz Generator</h1>
 
       <label htmlFor="topic" className="block text-lg mb-2">Quiz Topic:</label>
@@ -57,7 +57,7 @@ export default function QuizGenerator() {
         placeholder="Enter Quiz Topic"
         value={topic}
         onChange={handleTopicChange}
-        className="w-full px-3 py-2 mb-4 border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"
+        className="w-full px-3 py-2 mb-4 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black"
       />
 
       <label htmlFor="numQuestions" className="block text-lg mb-2">Number of Questions:</label>
@@ -67,24 +67,24 @@ export default function QuizGenerator() {
         placeholder="Number of Questions"
         value={numQuestions}
         onChange={handleNumQuestionsChange}
-        className="w-full px-3 py-2 mb-4 border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"
+        className="w-full px-3 py-2 mb-4 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black"
       />
 
       <button
         onClick={handleSubmit}
-        className="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-700 transition mb-4"
+        className="w-full bg-black text-white py-2 rounded-lg hover:bg-black transition mb-4"
       >
         Generate Quiz
       </button>
 
       <button
         onClick={toggleShowAnswers}
-        className="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+        className="w-full bg-black text-white py-2 rounded-lg hover:bg-black transition"
       >
         {showAnswers ? 'Hide Answers' : 'Show Answers'}
       </button>
 
-      <div className="mt-6 bg-gray-100 p-4 rounded-lg">
+      <div className="mt-6 bg-black p-4 rounded-lg">
         <pre className="whitespace-pre-wrap">
           {showAnswers ? generatedQuiz : generatedQuiz.replace(/Answer Key:([\s\S]*)/g, '')} {/* Hide answers */}
         </pre>
