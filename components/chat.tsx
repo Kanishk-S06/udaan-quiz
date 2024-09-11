@@ -84,7 +84,7 @@ export default function QuizGenerator() {
         {showAnswers ? 'Hide Answers' : 'Show Answers'}
       </button>
 
-      <div className="mt-6 bg-black p-4 rounded-lg">
+      <div className="mt-6 bg-white p-4 rounded-lg">
         <pre className="whitespace-pre-wrap">
           {showAnswers ? generatedQuiz : generatedQuiz.replace(/Answer Key:([\s\S]*)/g, '')} {/* Hide answers */}
         </pre>
